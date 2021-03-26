@@ -26,6 +26,23 @@ body {
   margin-left: 70%;
 }
 
+.btn {
+  background-color: #5a5e83;
+  font-family: 'Montserrat', sans-serif;
+  text-align: center;
+  color: #6F74A3;
+  font-size: 1.5em;
+  border: none;
+}
+
+#drpd1:hover {
+  background-color: #5a5e83;
+}
+
+.btn:hover {
+  background-color: #4f5272;
+}
+
 ::-webkit-scrollbar {
   width: 10px;
 }

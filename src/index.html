@@ -11,17 +11,21 @@
   </head>
   <body>
     <h1 class="title">Bat To Code</h1>
+    <div id="ops">
+      <p id="cnvrttype" class="text">Converted Type: N/A</p>
+      <p id="filesel" class="text">File Selected: N/A</p>
+    </div>
     <div id="btns">
       <button id="btn1" class="btn">Select File</button>
       <div class="dropdown">
         <button id="drpd1"class="btn">Converted Type</button>
         <div class="dropdown-content">
-          <button class="btn">Python</button>
-          <button class="btn">Golang</button>
-          <button class="btn">C#</button>
-          <button class="btn">C++</button>
-          <button class="btn">Java</button>
-          <button class="btn">JavaScript</button>
+          <button class="btn" onclick="pyclick()">Python</button>
+          <button class="btn" onclick="goclick()">Golang</button>
+          <button class="btn" onclick="csclick()">C#</button>
+          <button class="btn" onclick="cppclick()">C++</button>
+          <button class="btn" onclick="javaclick()">Java</button>
+          <button class="btn" onclick="jsclick()">JavaScript</button>
         </div>
       </div>
       <button id="btn2" class="btn">Convert</button>

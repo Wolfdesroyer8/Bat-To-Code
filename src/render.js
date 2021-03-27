@@ -1,16 +1,18 @@
 console.log("js loaded");
-
 // libaries
-const {dialog} = require('electron').remote;
-
+var dialog = require('electron').remote.dialog;
 // make vars
-const DOM = document;
-const btnpy = DOM.getElementById('btnpy');
-const btngo = DOM.getElementById('btngo');
-const btncs = DOM.getElementById('btncs');
-const btncpp = DOM.getElementById('btncpp');
-const btnjava = DOM.getElementById('btnjava');
-const btnjs = DOM.getElementById('btnjs');
-const cnvrt = DOM.getElementById('cnvrt');
-const selfile = DOM.getElementById('selfile');
-
+var DOM = document;
+var btnpy = DOM.getElementById('btnpy');
+var btngo = DOM.getElementById('btngo');
+var btncs = DOM.getElementById('btncs');
+var btncpp = DOM.getElementById('btncpp');
+var btnjava = DOM.getElementById('btnjava');
+var btnjs = DOM.getElementById('btnjs');
+var cnvrt = DOM.getElementById('cnvrt');
+var selfile = DOM.getElementById('selfile');
+var button = /** @class */ (function () {
+    function button() {
+    }
+    return button;
+}());

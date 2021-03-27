@@ -1,3 +1,5 @@
+console.log("js loaded")
+
 function pyclick() {
  console.log("py")
 }

@@ -14,6 +14,12 @@ const btnjs = DOM.getElementById('btnjs');
 const cnvrt = DOM.getElementById('cnvrt');
 const selfile = DOM.getElementById('selfile');
 
-class button {
-    
+// make objects and inerfaces
+interface CnvrtArgs{
+    element: string,
+    type: string
+}
+
+let convert = (args: CnvrtArgs) => {
+
 }

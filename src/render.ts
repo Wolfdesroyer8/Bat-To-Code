@@ -14,12 +14,12 @@ const btnjs = DOM.getElementById('btnjs');
 const cnvrt = DOM.getElementById('cnvrt');
 const selfile = DOM.getElementById('selfile');
 
-class Convert{
+interface ConvertArgs{
     element: string;
     file: string;
     type: string;
+}
 
-    convert(args: Convert) {
+function convert(args: ConvertArgs) {
 
-    }
 }

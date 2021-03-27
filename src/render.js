@@ -11,8 +11,10 @@ var btnjava = DOM.getElementById('btnjava');
 var btnjs = DOM.getElementById('btnjs');
 var cnvrt = DOM.getElementById('cnvrt');
 var selfile = DOM.getElementById('selfile');
-var button = /** @class */ (function () {
-    function button() {
+var Convert = /** @class */ (function () {
+    function Convert() {
     }
-    return button;
+    Convert.prototype.convert = function (args) {
+    };
+    return Convert;
 }());

@@ -16,13 +16,18 @@ body {
 
 .text {
   font-family: 'Montserrat', sans-serif;
-  text-align: center;
+  text-align: left;
   color: #6F74A3;
   font-size: 1.5em;
 }
 
 #btns {
-  margin-top: 28%;
+  margin-top: 10%;
+  margin-left: 70%;
+}
+
+#ops {
+  margin-top: 10%;
   margin-left: 70%;
 }
 

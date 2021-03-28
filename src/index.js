@@ -20,11 +20,28 @@ const createWindow = () => {
   mainWindow.loadFile(path.join(__dirname, 'index.html'));
 
   // settings
-  mainWindow.webContents.openDevTools();
-  // mainWindow.removeMenu()
   mainWindow.maximize()
 
-  const { app, Menu } = require('electron')
+  const { Menu } = require('electron')
+  const { globalShortcut } = require('electron')
+  const { dialog } = require('electron')
+  const { fs } = require('fs')
+
+  function openFile() {
+    const files = dialog.showOpenDialog([mainWindow], {properties: ['openFile'], filters: [{name: 'Scripts', extensions: ['bat', 'cmd']}]})
+
+    if (!files) return false
+
+    const file = files[0]
+    const fileContent = fs.readFileSync(file).toString()
+    console.log(fileContent)
+  }
+
+  app.whenReady().then(() => {
+    globalShortcut.register('CommandOrControl+O', () => {
+      openFile()
+    })
+  })
 
 const isMac = process.platform === 'darwin'
 
@@ -48,7 +65,12 @@ const template = [
   {
     label: 'File',
     submenu: [
-      {label: 'Open File'},
+      {
+      label: 'Open File',
+      click() {
+        openFile()
+      }
+      },
       isMac ? { role: 'close' } : { role: 'quit' }
     ]
   },

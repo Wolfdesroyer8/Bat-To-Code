@@ -43,5 +43,5 @@ cnvrt.onclick = function () {
     console.log("convert");
 };
 selfile.onclick = function () {
-    console.log("convert");
+    console.log("select file");
 };

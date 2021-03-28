@@ -61,5 +61,5 @@ cnvrt.onclick = function(){
 };
 
 selfile.onclick = function(){
-    console.log("convert");
+    console.log("select file");
 }; 

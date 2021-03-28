@@ -30,7 +30,9 @@ const createWindow = () => {
   function openFile() {
     const files = dialog.showOpenDialog([mainWindow], {properties: ['openFile'], filters: [{name: 'Scripts', extensions: ['bat', 'cmd']}]})
 
-    if (!files) return false
+    if (!files) {
+      return false
+    }
 
     const file = files[0]
     const fileContent = fs.readFileSync(file).toString()

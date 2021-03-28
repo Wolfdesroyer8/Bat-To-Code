@@ -8,30 +8,40 @@ const btnjava = DOM.getElementById('btnjava');
 const btnjs = DOM.getElementById('btnjs');
 const cnvrt = DOM.getElementById('cnvrt');
 const selfile = DOM.getElementById('selfile');
+class Type {
+    changetype(type) {
+        DOM.getElementById("cnvrttype").innerHTML = `Converted Type: ${type}`;
+        this.type = type;
+    }
+    getType() {
+        return this.type;
+    }
+}
 function convert(element, file, type) {
     console.log(`element: ${element}\nfile: ${file}\ntype: ${type}`);
 }
+let type = new Type;
 btnpy.onclick = function () {
-    console.log("click!");
+    type.changetype("Python");
 };
 btngo.onclick = function () {
-    console.log("click!");
+    type.changetype("Golang");
 };
 btncs.onclick = function () {
-    console.log("click!");
+    type.changetype("C#");
 };
 btncpp.onclick = function () {
-    console.log("click!");
+    type.changetype("C++");
 };
 btnjava.onclick = function () {
-    console.log("click!");
+    type.changetype("Java");
 };
 btnjs.onclick = function () {
-    console.log("click!");
+    type.changetype("JavaScript");
 };
 cnvrt.onclick = function () {
-    console.log("click!");
+    console.log("convert");
 };
 selfile.onclick = function () {
-    console.log("click!");
+    console.log("convert");
 };

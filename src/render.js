@@ -1,5 +1,4 @@
 console.log("js loaded");
-const { dialog } = require('electron');
 const DOM = document;
 const btnpy = DOM.getElementById('btnpy');
 const btngo = DOM.getElementById('btngo');
@@ -44,5 +43,5 @@ cnvrt.onclick = function () {
     console.log("convert");
 };
 selfile.onclick = function () {
-    dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] });
+    console.log("select file");
 };

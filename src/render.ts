@@ -1,7 +1,7 @@
 console.log("js loaded");
 
 // libaries
-
+const { dialog } = require('electron');
 // make vars
 const DOM = document;
 const btnpy = DOM.getElementById('btnpy');
@@ -61,5 +61,5 @@ cnvrt.onclick = function(){
 };
 
 selfile.onclick = function(){
-    console.log("select file");
+    dialog.showOpenDialog({ properties: ['openFile', 'multiSelections'] });
 }; 

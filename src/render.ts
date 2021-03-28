@@ -1,7 +1,7 @@
 console.log("js loaded");
 
 // libaries
-const {dialog} = require('electron').remote;
+//const {dialog} = require('electron').remote;
 
 // make vars
 const DOM = document;
@@ -14,6 +14,38 @@ const btnjs = DOM.getElementById('btnjs');
 const cnvrt = DOM.getElementById('cnvrt');
 const selfile = DOM.getElementById('selfile');
 
-function convert(element, file, type) {
-    console.log(`element: ${element}\nfile: ${file}\ntype: ${type}`)
+function convert(element: string, file: string, type: string) {
+    console.log(`element: ${element}\nfile: ${file}\ntype: ${type}`);
 }
+
+btnpy.onclick = function(){
+    console.log("click!");
+};
+
+btngo.onclick = function(){
+    console.log("click!");
+};
+
+btncs.onclick = function(){
+    console.log("click!");
+};
+
+btncpp.onclick = function(){
+    console.log("click!");
+};
+
+btnjava.onclick = function(){
+    console.log("click!");
+};
+
+btnjs.onclick = function(){
+    console.log("click!");
+};
+
+cnvrt.onclick = function(){
+    console.log("click!");
+};
+
+selfile.onclick = function(){
+    console.log("click!");
+};

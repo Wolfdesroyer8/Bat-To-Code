@@ -12,4 +12,5 @@ var btnjs = DOM.getElementById('btnjs');
 var cnvrt = DOM.getElementById('cnvrt');
 var selfile = DOM.getElementById('selfile');
 function convert(args) {
+    console.log("element: " + element + "\nfile: " + file + "\ntype: " + type);
 }

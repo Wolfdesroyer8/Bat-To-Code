@@ -14,12 +14,6 @@ const btnjs = DOM.getElementById('btnjs');
 const cnvrt = DOM.getElementById('cnvrt');
 const selfile = DOM.getElementById('selfile');
 
-interface ConvertArgs{
-    element: string;
-    file: string;
-    type: string;
-}
-
-function convert(args: ConvertArgs) {
-
+function convert(element, file, type) {
+    console.log(`element: ${element}\nfile: ${file}\ntype: ${type}`)
 }

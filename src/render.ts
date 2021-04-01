@@ -10,6 +10,9 @@ const btnjava = DOM.getElementById('btnjava');
 const btnjs = DOM.getElementById('btnjs');
 const cnvrt = DOM.getElementById('cnvrt');
 const selfile = DOM.getElementById('selfile');
+import { createRequire } from 'module';
+const require = createRequire(import.meta.url);
+const { ipcRenderer } = require('electron')
 
 class Type {
     private type: string;
@@ -61,3 +64,10 @@ cnvrt.onclick = function(){
 selfile.onclick = function(){
     console.log("select file");
 }; 
+
+console.log(ipcRenderer.sendSync('synchronous-message', 'ping')) // prints "pong"
+
+ipcRenderer.on('asynchronous-reply', (event: any, arg: string) => {
+  console.log(arg) // prints "pong"
+})
+ipcRenderer.send('asynchronous-message', 'ping')

@@ -8,6 +8,7 @@ const btnjava = DOM.getElementById('btnjava');
 const btnjs = DOM.getElementById('btnjs');
 const cnvrt = DOM.getElementById('cnvrt');
 const selfile = DOM.getElementById('selfile');
+const { ipcRenderer } = require('electron');
 class Type {
     changetype(type) {
         DOM.getElementById("cnvrttype").innerHTML = `Converted Type: ${type}`;
@@ -45,3 +46,8 @@ cnvrt.onclick = function () {
 selfile.onclick = function () {
     console.log("select file");
 };
+console.log(ipcRenderer.sendSync('synchronous-message', 'ping'));
+ipcRenderer.on('asynchronous-reply', (event, arg) => {
+    console.log(arg);
+});
+ipcRenderer.send('asynchronous-message', 'ping');

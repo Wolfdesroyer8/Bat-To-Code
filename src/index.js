@@ -26,6 +26,16 @@ const createWindow = () => {
   const { globalShortcut } = require('electron')
   const { dialog } = require('electron')
   const { fs } = require('fs')
+  const { ipcMain } = require('electron')
+  ipcMain.on('asynchronous-message', (event, arg) => {
+  console.log(arg) // prints "ping"
+  event.reply('asynchronous-reply', 'pong')
+  })
+
+  ipcMain.on('synchronous-message', (event, arg) => {
+    console.log(arg) // prints "ping"
+    event.returnValue = 'pong'
+  })
 
   function openFile() {
     const files = dialog.showOpenDialog([mainWindow], {properties: ['openFile'], filters: [{name: 'Scripts', extensions: ['bat', 'cmd']}]})
